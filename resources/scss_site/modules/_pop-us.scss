@@ -1,0 +1,112 @@
+.pop-up {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -20px;
+    background-color: $cinza-tabela;
+    padding: 15px;
+    position: absolute;
+    margin-top: 20px;
+    z-index: 2;
+    display: none;
+
+    &.active{
+        display: block;
+    }
+    @include mq("tablet-wide", max) {
+        width: 85vw;
+        margin-top: 12px;
+      }
+
+    &::after {
+        position: absolute;
+        content: "";
+        border-style: solid;
+        border-width: 0 30px 40px 30px;
+        border-color: transparent transparent $cinza-tabela transparent;
+        top: -23px;
+        z-index: 5;
+        left: calc(50% - 5px);
+
+        @include mq("tablet-wide", max) {
+            left: calc(50% - -45px);
+        }
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .sub-title {
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        color: $cinza;
+    }
+
+    .btn-nao-permitir {
+        border-radius: 5px;
+        border: 1px solid $azul-2;
+        background-color: $branco;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+        padding: 5px 15px;
+        @include mq("tablet-wide", max) {
+            margin-top: 10px;
+        }
+        
+
+        &:hover {
+            background-color: $azul-2;
+            transition-duration: 0.6s;
+        }
+
+     
+            font-weight: 500;
+            font-size: 16px;
+            color: $azul-2;
+
+            &:hover {
+                color: $branco;
+                transition-duration: 0.6s;
+            }
+    
+    }
+
+    .btn-permitir {
+        border-radius: 5px;
+        background-color: $azul-2;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+        padding: 5px 15px;
+        @include mq("tablet-wide", max) {
+            margin-top: 5px;
+        }
+        
+
+        &:hover {
+            background-color: $branco;
+            transition-duration: 0.6s;
+            border: 1px solid $azul-2;
+        }
+
+
+            font-weight: 500;
+            font-size: 16px;
+            color: $branco;
+
+            &:hover {
+                color: $azul-2;
+                transition-duration: 0.6s;
+            }
+     
+    }
+}

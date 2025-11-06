@@ -1,0 +1,166 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+
+    // background-image: url('../img_site/img-footer.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-color: #724e1e;
+    padding: 50px 50px 10px 50px;
+
+    .logo{
+        width: 20%;
+        @include mq("tablet-wide", max) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .logo-footer{
+                display: flex;
+                justify-content: center;
+            }
+
+            img{
+                width: 60%;
+            }
+        }
+    }
+
+    .menu{
+        width: 17.5%;
+        @include mq("tablet-wide", max) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .contato{
+        width: 37.5%;
+        @include mq("tablet-wide", max) {
+            width: 100%;
+        }
+    }
+
+
+
+    @include mq("tablet-wide", max) {
+        position: relative;
+    }
+
+    h5{
+        font-size: 22px;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+
+    .btn-franqueado {
+        background-color: $azul-2;
+        padding: 20px;
+        border: none;
+        text-align: center;
+        border-radius: 8px;
+        width: 80%;
+        font-size: 16px;
+        font-weight: 400;
+        color: $branco;
+        display: block;
+        margin-left: calc(50% - 40%);
+
+        @include mq("tablet-wide", max) {
+            padding: 10px 15px 10px 15px;
+            font-size: 20px;
+        }
+
+        &:hover {
+            color: $azul-2;
+            background-color: $preto;
+            transition: 300ms;
+        }
+    }
+
+    // .title {
+    //     color: $branco;
+    //     font-weight: 600;
+    //     font-size: 16px;
+    //     margin-bottom: 0px;
+    // }
+
+    .endereco {
+        color: $branco;
+        font-weight: 700;
+        font-size: 20px;
+
+        @include mq("tablet-wide", max) {
+            font-size: 18px;
+        }
+    }
+
+    .input-footer{
+        font-size: 14px;
+        color: #7E7E7E;
+        font-weight: 400;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        display: block;
+    }
+    .botao-footer{
+        background-color: $azul-2;
+        padding: 11px;
+        border: none;
+        text-align: center;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        color: $branco;
+        display: block;
+    }
+    p{
+        color: $branco;
+        font-size: 14px;
+        font-weight: 400;
+      
+      
+
+        i{
+            font-size: 18px;
+            padding-right: 10px;
+            padding-top: 1rem;
+        }
+    }
+
+    .logo-footer img{
+        width: 80%;
+    }
+}
+
+#menu-footer {
+
+    ul {
+        padding: 0;
+        @include mq("phone-wide", max) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li {
+            @include mq("phone-wide", max) {
+                margin: 0;
+                width: 100%;
+            }
+            a {
+                text-decoration: none;
+                color: $branco;
+                font-size: 13px;
+                font-weight: 500;
+                display: block;
+                margin: 5px 0;
+                @include mq("phone-wide", max) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

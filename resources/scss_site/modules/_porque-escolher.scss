@@ -1,0 +1,135 @@
+#porque-escolher {
+    background-color: $cor-1;
+    padding-bottom: 1.5rem;
+    @include mq("phablet",'max'){
+        padding: 20px;
+    }
+    .dep{
+      
+        @include mq("phone-wide", max) {
+           height: auto;
+        }
+    }
+
+    h2{
+        font-weight: 600;
+        font-size: 25px;
+        color: #1f1f1f;
+    }
+
+    .title {
+       
+        font-weight: 400;
+        font-size: 25px;
+        color: $azul-2;
+        text-align: center;
+        padding-top: 20px;
+
+        img {
+            width: 15vh;
+            margin-top: 1rem;
+        }
+        p{
+            font-weight: 400;
+            font-size: 14px;
+            color: #3D4D58;
+        }
+    }
+    .carrinho{
+        height: 100%;
+      
+      
+    }
+    .img-360{
+       position: relative;
+       &:before{
+        content: "";
+        position: absolute;
+        top: 80%;
+        width: 100%;
+        height: 30px;
+        border-radius: 50%;
+        background: radial-gradient(#9f9f9f, #f7f7f769, #ffffff00);
+       }
+      
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        &.icons-left{
+            @include mq("phablet",'max'){
+                li{
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+                }
+            }
+            @include mq("phablet",'min'){
+
+
+                justify-content: end;
+            
+                li{
+                    justify-content: end;
+                }
+            }
+        }
+        li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+      
+
+            .icone-lista {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $branco;
+                background-color: $azul-2;
+                font-size: 30px;
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                // float: left;
+
+                &.bege {
+                    background-color: $bege;                
+                }
+            }
+
+            .frase {
+                color: $azul-2;
+
+                p{
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 0.5rem;
+                }
+
+                &.bege {
+                    color: $bege;                
+                }
+                small{
+                    font-weight: 300;
+                    font-size: 14px;
+                    display: block;
+                }
+            }
+
+            .small {
+                font-weight: 300;
+                font-size: 14px;
+                color: $azul-2;
+
+                &.segunda-frase {
+                    color: $bege;              
+                }
+            }
+        }
+    }
+ 
+}

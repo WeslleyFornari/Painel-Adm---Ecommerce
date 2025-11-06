@@ -1,0 +1,127 @@
+#categorias {
+
+    .slick-slider .slick-list {
+        padding: 30px 0;
+    }
+    .slick-next:before {
+        color: #000 !important;
+        content: "\f054";
+        font-family: $font-icon;
+        font-weight: 900;
+    }
+    .slick-prev:before {
+        color: #000 !important;
+        content: "\f053";
+        font-family: $font-icon;
+        font-weight: 900;
+    }
+    .slick-dots li{
+        button:before {
+            font-family: 'slick';
+            font-size: 6px;
+            line-height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 7px;
+            background-color: #C5C5C5;
+            content: '';
+            border-radius: 40%;
+            text-align: center;
+            opacity: .75;
+            color: black;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slick-active button:before {
+            opacity: .75;
+            background-color: #02719E;
+        }
+    }
+    h1{
+        font-weight: 700;
+        font-size: 25px;
+        color: #1F1F1F;
+    }
+    
+    .item {
+        width: 100%;
+        // padding: 20px;
+        border: none;
+        padding: 10px;
+        background-color: transparent;
+        // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin: 15px;
+        // height: 500px;
+        border-radius: 12px;
+        &:hover{
+            box-shadow: $azul-3 0px 7px 29px 20px;
+            transition: 0.5s all ease-in-out;
+        }
+        img{
+        //     width: 100%;
+            width: 200px;
+            height: 200px;
+            border-radius: 4px;
+            margin-left: calc(50% - 100px)
+
+            // object-fit: cover;
+        }
+    
+        .descricao-produto {
+           
+            font-weight: 600;
+            font-size: 18px;
+            color: $preto;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 20px;
+
+            .nome{
+                overflow: hidden;
+                text-overflow: ellipsis;
+             
+                -webkit-line-clamp: 2;
+                height: 2.5em;
+                font-size: 14px;
+                line-height: 1.2;
+                color: $azul-6;
+                text-align: center;
+            }
+            .valores{
+                small{
+                    font-size: 12px;
+                    font-family: 'Nunito';
+                    font-weight: 12px;
+                }
+            }
+        }
+    
+        .espaco-btn-alugar {
+    
+            padding: 20px;
+            text-align: center;
+    
+            .btn-alugar {
+    
+                background-color: $azul-1;
+                border: none;
+                border-radius: 30px;
+                padding: 10px 55px 10px 55px;
+               
+                font-weight: 400;
+                font-size: 20px;
+                color: $preto;
+                text-transform: uppercase;
+    
+                &:hover {
+                    background-color: $azul-2;
+                    color: $branco;
+                    transition-duration: 0.6s;
+                }
+            }
+        }
+        
+    }
+}

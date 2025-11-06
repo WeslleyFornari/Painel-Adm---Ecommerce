@@ -1,0 +1,82 @@
+.topo {
+    width: 100%;
+    padding: 20px;
+    background: rgba(#005375, 70%);
+
+    p {
+        font-weight: 700;
+        font-size: 25px;
+        color: #fff;
+        margin-bottom: 0;
+    }
+}
+
+.formulario {
+    background-color: $cinza-tabela;
+    border-radius: 4px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    min-height: 50vh;
+    padding: 50px;
+    @include mq("tablet-wide", max) {
+        width: 100% !important;
+        height: 60vh;
+    }
+}
+
+.subtitulo {
+    font-weight: 600;
+    color: $preto;
+    text-align: center;
+}
+
+
+
+.btn-esquici-senha {
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: underline $preto;
+
+    a {
+        color: $preto;
+    }
+}
+
+
+.btn-login {
+    background-color: #02719E;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 70px;
+    font-weight: 700;
+    font-size: 20px;
+    color: $branco;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $branco;
+        border: 1px solid #02719E;
+        transition-duration: 0.6s;
+        color: #02719E;
+    }
+}
+
+.btn-link {
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    a {
+        color: $preto;
+
+        span {
+            
+            font-weight: bold;
+            display: block;
+        }
+    }
+
+    @include mq("tablet-wide", max) {
+        font-size: 15px;
+    }
+}

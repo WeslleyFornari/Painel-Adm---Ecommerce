@@ -1,0 +1,25 @@
+
+
+.btn-enviar {
+    background-color: $azul-1;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 70px;
+
+    &:hover {
+        background-color: $branco;
+        border: 1px solid $azul-1;
+        transition-duration: 0.6s;
+
+        a {
+            color: $azul-1;
+        }
+    }
+
+    a {
+        font-weight: 700;
+        font-size: 20px;
+        color: $branco;
+        text-transform: uppercase;
+    }
+}

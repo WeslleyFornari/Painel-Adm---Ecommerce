@@ -1,0 +1,33 @@
+.data-encomenda {
+    font-weight: 400;
+    color: $azul-2;
+    background-color: $azul-3;
+    padding: 15px;
+}
+
+.card-pedido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $cinza-2;
+    border-top: none;
+    border-radius: 3px;
+    padding: 30px;
+
+    p {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        color: $preto;
+        text-transform: uppercase;
+    }
+
+    a {
+        font-weight: 600;
+        font-size: 24px;
+        text-align: center;
+        color: $azul-2;
+        text-decoration: underline;
+    }
+}

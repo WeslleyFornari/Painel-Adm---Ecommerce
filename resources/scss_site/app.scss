@@ -1,0 +1,54 @@
+@import "variables";
+@import "modules/mixins";
+
+// Custom bootstrap variable overrides
+// @import "bootstrap_variable_overrides";
+
+// Bootstrap and its default variables
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// @import '../../node_modules/animate.css/animate.css';
+
+// Your style
+
+
+@import "base/fonts";
+@import "base/inputs";
+@import "base/general";
+
+
+@import "modules/header";
+@import "modules/banner";
+@import "modules/cards";
+@import "modules/porque-escolher";
+@import "modules/depoimentos";
+@import "modules/duvidas-frequentes";
+@import "modules/footer";
+@import "modules/menu";
+
+@import "modules/data-aluguel";
+@import "modules/produtos";
+@import "modules/detalhes-produto";
+@import "modules/sugestao-compra";
+@import "modules/informacoes-produto";
+@import "modules/avaliacoes-clientes";
+@import "modules/login";
+@import "modules/criar-conta";
+@import "modules/recuperar-senha";
+@import "modules/meus-pedidos";
+@import "modules/configuracoes";
+@import "modules/carrinho";
+@import "modules/pagamento";
+@import "modules/resumo-pagamento";
+@import "modules/protocolos-atendimento";
+@import "modules/resumo-pedidos";
+@import "modules/pop-us";
+@import "modules/modal-localizacao";
+@import "modules/facilitoy";
+@import "modules/breadcrumb";
+@import "modules/loading";
+@import "modules/como-funciona";
+@import "modules/termos-condicoes";
+@import "modules/pesquisa-avancada";
+@import "modules/menu-conta";
+
+

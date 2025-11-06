@@ -1,0 +1,31 @@
+#banner {
+    position: relative;
+    margin-top: 0;
+    // background-color: $azul-1;
+    width: 100%;
+    @include mq("phone-wide", min) {
+        height: 60vh;
+    }
+    z-index: 2;
+    // @include mq("phone-wide", max) {
+    //     height: 35vh;
+    // }
+
+    .item {
+        position: relative;
+        @include mq("phone-wide", min) {
+            height: 60vh;
+        }
+        display: flex;
+        z-index: 3;
+        // @include mq("phone-wide", max) {
+        //     height: 35vh;
+        // }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}

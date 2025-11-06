@@ -1,0 +1,129 @@
+#pesquisa-avancada {
+
+    background:#367791;
+    color: #fff;
+    padding: 25px 0 20px 0;
+    width: 100%;
+    box-shadow: inset 0px 6px 10px rgba(0,0,0,0.28);
+    h4{
+        
+        font-size: 22px;
+        @include mq('tablet','max'){
+            font-size: 20px;
+        }
+        font-weight: 600;
+    }
+    .container-local {
+        background: #fff;
+        border-radius: 4px;
+        height: 54px;
+        width: 100%;
+
+        span {
+            font-size: 12px;
+            display: inline-block;
+            padding: 0 10px;
+        }
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0;
+        color: #fff;
+
+    }
+
+    #autocompleteLocal,
+    #autocompleteProduto {
+        top: 70px;
+        z-index: 99;
+    }
+
+    .autocomplete {
+        display: none;
+        background-color: white;
+        border-radius: 8px;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        @include mq('tablet','max'){
+            width: 90%;
+        }
+        z-index: 10;
+        text-align: left;
+        padding: 0.5rem;
+        #autocompleteLocal,#autocompleteProduto{
+            overflow-y: scroll;
+            max-height: 150px;
+        }
+
+        a {
+            position: relative;
+            text-align: left;
+            display: block;
+            width: 100%;
+            font-size: 14px;
+            text-decoration: none;
+         
+          vertical-align: middle;
+           border-radius: 4px;
+           padding: 10px;
+           color: #484848;
+           
+        }
+
+      
+
+        a:hover {
+            background-color: #E7E7E7;
+            cursor: pointer;
+        }
+
+        #notfound {
+            color: #02719e;
+            text-align: left;
+        }
+    }
+    .btnBuscar{
+        background: #0D6EFD;
+        color: #fff;
+        height: 54px;
+        padding: 15px;
+        display: flex;
+        border-radius: 4px;
+        border: none;
+        gap: 10px;
+        align-items: center;
+    }
+
+    @include mq('tablet','max'){
+        display: none;
+        .custom-floating{
+            margin-bottom: 15px;
+        }
+        .btnBuscar{
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+           
+
+        }
+    }
+
+    @include mq('tablet','max'){
+        position: fixed;
+        width: 100%;
+        bottom: -100%;
+        transition: bottom 2s;
+        &.open{
+           
+            bottom: 50px;
+            
+            height: auto;
+            display: block;
+            z-index: 99998;
+            
+        }
+    }
+}

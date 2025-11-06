@@ -1,0 +1,87 @@
+#depoimentos {
+    position: relative;
+    // background-color: $azul-1;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    padding-top: 50px;
+    // background-image: url('../img_site/fundo.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+
+    .item {
+        position: relative;
+        @include mq('tablet','min'){
+            padding: 70px;
+        }
+        // height: 50vh;
+        z-index: 3;
+
+        .foto img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: #00000073 0 20px 20px -20px;
+        }
+    
+    }
+
+    img {
+        // width: 100%;
+        margin: 0 auto;
+    }
+
+    .depoimento {
+        margin-top: 20px;
+    }
+
+    .slick-depoimentos{
+        padding: 0px 50px;
+    }
+    .slick-next:before {
+        color: #000 !important;
+        content: "\f054";
+        font-family: $font-icon;
+        font-weight: 900;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-size: 20px;
+    }
+    
+    .slick-prev:before {
+        color: #000 !important;
+        content: "\f053";
+        font-family: $font-icon;
+        font-weight: 900;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        font-size: 20px;
+    }
+
+    h1 {
+       
+        font-weight: 600;
+        font-size: 30px;
+        color: $preto;
+        text-align: center;
+        padding-top: 35px;
+        text-transform: uppercase;
+    }
+
+    
+}

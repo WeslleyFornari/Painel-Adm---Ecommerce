@@ -1,0 +1,101 @@
+.tabela {
+    overflow-x: auto;
+
+    input {
+        border: 1px solid $azul-2;
+        border-radius: 5px;
+    }
+
+    #placeholder-text::placeholder {
+
+        font-weight: 300;
+        font-size: 15px;
+        text-align: center;
+        color: $azul-2;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid $cinza-borda-texarea;
+}
+
+th {
+    background-color: $cinza-borda-texarea;
+    border: none;
+}
+
+td {
+    font-weight: 500;
+    font-size: 18px;
+    color: $azul-2;
+}
+
+@media (max-width: 600px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+
+        @include mq("tablet-wide", max) {
+            padding-left: 0;
+        }
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+.ver-todos {
+
+    .form-select {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        color: $branco;
+        background-color: $azul-2;
+        --bs-form-select-bg-img: url('../img_site/chevron-down-solid.svg');
+        background-repeat: no-repeat;
+        background-position: right 37% bottom 53%;
+        background-size: 23px;
+    }
+}

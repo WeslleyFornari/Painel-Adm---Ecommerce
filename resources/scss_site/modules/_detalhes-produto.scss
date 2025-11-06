@@ -1,0 +1,413 @@
+
+
+#card-produto {
+
+    .slick-produto {
+        background-color: $branco;
+        // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 100%;
+       border-radius: 8px;
+       border: 1px solid #C5C5C5;
+
+
+        .item{
+            img{
+                width: 100%;
+                height: 560px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .slider-nav {
+
+        .item {
+            margin: 5px;
+            text-align: center;
+            background: $branco;
+            padding: 5px;
+            border:1px solid $cinza-borda-texarea;
+            border-radius: 4px;
+            cursor: pointer;
+            &.slick-current{
+                border: 1px solid $azul-1;
+            }
+            img{
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                display: inline-block;
+            }
+        }
+    }
+
+    .slick-next .slick-prev{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .slick-next:before {
+        color: $preto !important;
+        content: '\f054';
+        font-family: $font-icon !important;
+        font-weight: 900;
+        left: 20px;
+    }
+    .slick-prev:before {
+        color: $preto !important;
+        content: '\f104';
+        font-family: $font-icon !important;
+        font-weight: 900;
+        right: 20px;
+    }
+
+    .slick-arrow:before {
+       
+        font-family: $font-icon !important;
+        color: $preto !important;
+    }
+
+    .nome-produto {
+        font-weight: 700;
+        font-size: 18px;
+        color: $azul-2;
+        // background-color: $branco;
+        // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 10px;
+
+        img {
+            display: flex;
+        }
+    }
+
+    .card-produto{
+        background-color: #F2F2F2;
+        border-radius: 8px;
+        padding: 20px;
+
+        .texto-color{
+            color: #976E38;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        p{
+            color: #565858;
+            font-size: 14px;
+        }
+    }
+
+    .tempo-aluguel {
+        border-radius: 5px;
+        padding: 10px 10px 15px 10px;
+
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            color: #000;
+            margin-bottom: 3px;
+            display: inline-flex;
+            position: relative;
+
+            &::before{
+                content: "*";
+                color: #D30909;
+                font-size: 14px;
+                position: absolute;
+                top: 0;
+                right: -10px;
+
+            }
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .single-input {
+            position: relative;
+
+            &::before{
+                content: "\f133";
+                font-family: $font-icon;
+                font-weight: 300;
+                position: absolute;
+                z-index: 99;
+                color: #767676;
+                right: 10px;
+                top: 8px;
+            }
+
+            input {
+                border-radius: 8px;
+                border: none;
+                padding: 10px;
+                outline: none;
+                color: #767676;
+                font-size: 14px;
+                position: relative;
+            }
+
+            ::placeholder {
+                color: $branco;
+                padding-left: 15px;
+            }
+
+            #placeholder-text {
+                color: $branco;
+            }
+        }
+    }
+
+    .card-diarias {
+        border-radius: 30px;
+        border: none;
+        padding: 10px;
+        border: 1px solid #D2D2D2;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+
+        span {
+            color: $azul-2;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+            width: 30px;
+            text-align: center;
+            border: none;
+            padding: 5px;
+            background-color: transparent;
+        }
+        
+        button {
+            background-color: transparent;
+            border: none;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        button:focus,
+        input:focus {
+            outline: none;
+        }
+        
+    }
+
+    #estoque{
+        color: #CB2E2E;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .title {
+        font-weight: 400;
+        font-size: 14px;
+        color: #565858;
+    }
+
+    p{
+        font-weight: 600;
+        font-size: 14px;
+        color: #565858;
+        margin-bottom: 0;
+    }
+
+    .divider {
+        border-bottom: 1.5px solid $azul-2;
+
+        @include mq("tablet-wide", max) {
+            display: none;
+        }
+    }
+
+    .valor-aluguel {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 14px;
+        color: #565858;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        text-align: center;
+        background-color: #F4F4F4;
+    }
+
+    .btn-alugar {
+        background-color: $azul-2;
+        border: none;
+        border-radius: 8px;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        color: $branco;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        a {
+            color: $branco;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background-color: $branco;
+            border: 1px solid $azul-2;
+            transition-duration: 0.6s;
+            color: $azul-2;
+
+            a {
+                color: $azul-2;
+            }
+        }
+    }
+
+    .card-adicionais {
+        background-color: $branco;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border: none;
+        padding: 10px;
+        position: relative;
+
+        .adicionais {
+            position: absolute;
+            background-color: $azul-2;
+            color: $branco;
+            top: -30px;
+            font-weight: 600;
+            font-size: 18px;
+            height: 4vh;
+            width: 8vw;
+            left: 0;
+            border-radius: 8px 8px 0 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mq("tablet-wide", max) {
+                top: -25px;
+                width: 28vw;
+            }
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 0;
+            margin-left: 1rem;
+        }
+
+        #produto {
+            position: relative;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .balao {
+        position: absolute;
+        display: none;
+        background-color: $azul-3;
+        border: 1px solid $azul-2;
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 12vw;
+        min-height: 25vh;
+        bottom: 70px;
+        left: -30px;
+
+        @include mq("tablet-wide", max) {
+            width: 42vw;
+            bottom: 115px;
+            left: 5px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 0 10px 35px 10px;
+            border-color: transparent transparent $azul-3 transparent;
+            transform: rotate(180deg);
+            bottom: -35px;
+            left: 35px;
+        }
+
+        img {
+            max-width: 120px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .info {
+            span {
+                font-weight: 700;
+                font-size: 18px;
+                color: $azul-2;
+                text-align: center;
+            }
+
+            small {
+                font-weight: 400;
+                font-size: 15px;
+                color: $azul-2;
+                text-align: center;
+            }
+        }
+    }
+
+    #produto:hover~.balao {
+        display: block;
+    }
+
+    #produto {
+        position: relative;
+    }
+}
+
+.number-input {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #565858;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    background-color: #F4F4F4;
+    width: 50px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

@@ -1,0 +1,212 @@
+.resumo-pagamento {
+
+    .card-pagamento {
+        background-color: $cinza-textarea;
+        margin: 0 auto;
+        box-shadow: 0px 4px 10px 0px #00000040;
+        min-height: 30vh;
+        border-top: 5px solid $cor-2;
+
+        i {
+            font-size: 25px;
+            color: $azul-2;
+            position: relative;
+            top: 10px;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 27px;
+            color: $preto;
+            position: relative;
+            top: 10px;
+        }
+
+        hr {
+            margin: 1rem 0;
+            color: inherit;
+            border: 0;
+            border-top: 1px $cor-3 solid;
+            opacity: 1;
+            width: 100%;
+        }
+
+        .title-cadastro {
+            font-weight: 400;
+            font-size: 18px;
+            color: $preto;
+            padding-top: 20px;
+        }
+
+        .form-check-input[type=checkbox] {
+            border: 1px solid $cinza !important;
+            border-radius: 0;
+            font-size: 20px;
+        }
+
+        .form-check-input:checked {
+            background-color: $cinza !important;
+            border: none;
+        }
+
+        .form-check-input:checked[type=checkbox] {
+            --bs-form-check-bg-image: none;
+            font-size: 20px;
+        }
+
+        .form-check-input:checked[type=radio] {
+            --bs-form-check-bg-image: none;
+            font-size: 20px;
+        }
+
+        .form-check .form-check-input {
+            float: left;
+            margin-left: -1.3em;
+            font-size: 20px;
+        }
+
+        .txt-check {
+            font-weight: 400;
+            font-size: 20px;
+            color: $preto;
+
+            strong {
+                font-weight: 600;
+            }
+        }
+
+        .input-custon {
+            border: 1px solid $cor-3;
+            border-radius: 5px;
+            padding: 5px 20px;
+            width: 12vw;
+            font-weight: 600;
+            font-size: 15px;
+            color: $cor-3;
+
+            @include mq("tablet-wide", max) {
+                width: 50vw;
+            }
+        }
+
+        .buscar-cep {
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 18px;
+            color: $cor-3;
+            margin-top: 30px;
+        }
+
+        textarea {
+            background-color: $cinza-textarea;
+            border: 1px solid $cinza-borda-texarea;
+            resize: none;
+            height: 100px;
+        }
+
+        .texto-resumo {
+            font-weight: 500;
+            font-size: 20px;
+            color: $cor-2;
+
+            input {
+                width: 8vw;
+                border-radius: 5px;
+                border: 1px solid $cinza-borda-texarea;
+
+                @include mq("tablet-wide", max) {
+                    width: 33vw;
+                }
+            }
+
+            ::placeholder {
+
+                padding-left: 15px;
+                font-size: 15px;
+            }
+
+            #placeholder-text {
+                background-color: $cinza-textarea;
+            }
+
+            .linha {
+                font-weight: 700;
+                font-size: 27px;
+                color: $preto;
+                position: relative;
+                top: 10px;
+
+                hr {
+                    margin: 1rem 0;
+                    color: inherit;
+                    border: 0;
+                    border-top: 1px $cor-3 solid;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .texto-total {
+            font-weight: 700;
+            font-size: 20px;
+            color: $cor-2;
+        }
+
+        .bnt-finalizar-compra {
+            padding: 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: $azul-2;
+            text-align: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: $branco;
+            text-transform: uppercase;
+
+            @include mq("tablet-wide", max) {
+               padding: 15px;
+            }
+            
+            a {
+                font-weight: 700;
+                font-size: 20px;
+                color: $branco;
+                text-transform: uppercase;
+
+                @include mq("tablet-wide", max) {
+                    font-size: 18px;
+                }
+            }
+
+            &:hover {
+                background-color: $branco;
+                border: 1px solid $azul-1;
+                color: $azul-2;
+                transition-duration: 0.6s;
+    
+                a {
+                    color: $azul-1;
+                }
+            }
+        }
+        :disabled{
+            opacity: 0.5 !important;
+        }
+    }
+
+    form label {
+        display: block;
+        font-size: 18px;
+        margin: 20px 0 0px;
+        font-weight: 400;
+        color: $preto;
+    }
+
+    hr {
+        margin: 0;
+        color: inherit;
+        border: 0;
+        border-top: var(--bs-border-width) solid;
+        opacity: 1;
+    }
+}

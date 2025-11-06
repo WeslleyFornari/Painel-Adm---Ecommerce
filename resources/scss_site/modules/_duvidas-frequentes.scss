@@ -1,0 +1,16 @@
+#duvidas-frequentes {
+
+    @include mq("tablet-wide", max) {
+        position: relative;
+    }
+
+    h1 {
+       
+        font-weight: 600;
+        font-size: 30px;
+        color: $preto;
+        text-align: center;
+        padding-top: 35px;
+        text-transform: uppercase;
+    }
+}

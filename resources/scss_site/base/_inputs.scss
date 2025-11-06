@@ -1,0 +1,47 @@
+.custom-floating{
+    position: relative;
+    height: 54px;    input{
+        height: 54px;
+        display: block;
+        width: 100%;
+        padding: 26px 0.75rem 3px 0.75rem;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--bs-body-color);
+        appearance: none;
+        background-color: var(--bs-body-bg);
+        background-clip: padding-box;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        border-radius: var(--bs-border-radius);
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        &:not(:placeholder-shown)~label{
+            transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+        }
+        &:focus{
+            outline: none;
+            border: 2px solid #007FFF;
+            & ~ label{
+               
+                transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+            }
+        }
+    }
+    label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem .75rem;
+        overflow: hidden;
+        text-align: start;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        pointer-events: none;
+        border: 1px solid transparent;
+        transform-origin: 0 0;
+        transition: opacity .1s ease-in-out, transform .1s ease-in-out; 
+        color: $cinza !important;
+    }
+}

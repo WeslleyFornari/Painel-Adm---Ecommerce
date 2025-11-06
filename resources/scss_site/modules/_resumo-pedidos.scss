@@ -1,0 +1,304 @@
+.accordion-item {
+    border-radius: 4px;
+
+    .accordion-button {
+        width: 100%;
+        // background-color: $azul-3;
+        background-color: #F4F4F5;
+        font-size: 14px;
+
+        &::after {
+            font-size: 12px;
+            content: "\f078";
+            font-family: $font-icon;
+            font-weight: 900;
+            background-image: none;
+        }
+
+        strong {
+            color: $azul-2;
+        }
+    }
+}
+
+.accordion-body {
+
+    .title {
+        font-weight: 600;
+        font-size: 24px;
+        color: $azul-2;
+    }
+
+    .sub-title {
+        font-weight: 400;
+        font-size: 17px;
+        color: $cinza;
+    }
+
+    .card-andamento {
+        width: 100%;
+        height: auto;
+        background-color: $azul-3;
+        border: none;
+        border-radius: 15px;
+        padding: 20px;
+
+        .icones-andamento{
+            width: 16.5%;
+            position: relative;
+
+            @include mq("tablet-wide", max) {
+                width: 100%;
+            }
+            
+            .icone{
+                width: 50%;
+                text-align: center;
+
+                @include mq("tablet-wide", max) {
+                    width: 100%;
+                    padding-bottom: 40px;
+                }
+
+                i{
+                    font-size: 25px;
+                    color: $azul-2;
+
+                    @include mq("tablet-wide", max) {
+                        font-size: 20px;
+                    }
+                }
+
+                p{
+                    font-weight: 500;
+                    font-size: 13px;
+                    color: $azul-2;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 60%;
+                height: 1px;
+                border-style: solid;
+                border-radius: 3px;
+                color: $azul-2;
+                left: 45%;
+                top: calc(50% - 25px);
+
+                @include mq("tablet-wide", max) {
+                    width: 1px;
+                    height: 30px;
+                    top: 65px;
+                    left: calc(50% - 0.5px)
+                }
+            }   
+        }
+        .icones-andamento2{
+            width: 16.5%;
+            position: relative;
+            @include mq("tablet-wide", max) {
+                width: 100%;
+            }
+            .icone{
+                width: 50%;
+                text-align: center;
+                @include mq("tablet-wide", max) {
+                    width: 100%;
+                }
+
+                i{
+                    font-size: 25px;
+                    color: $azul-2;
+                }
+
+                p{
+                    font-weight: 500;
+                    font-size: 13px;
+                    color: $azul-2;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .andamento {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            position: relative;
+
+            @include mq("tablet-wide", max) {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                gap: 25px;
+            }
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+                position: relative;
+
+                @include mq("tablet-wide", max) {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    padding-left: 40px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 5vw;
+                    height: 1px;
+                    border-style: solid;
+                    border-radius: 3px;
+                    top: 20px;
+                    left: 70px;
+                    color: $azul-2;
+
+                    @include mq("tablet-wide", max) {
+                        top: 30px;
+                        left: -23px;
+                        width: 20vw;
+                        transform: rotate(270deg);
+                    }
+                }     
+            }
+
+            li:last-child::before {
+                content: none;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .txt-andamento {
+                font-weight: 500;
+                font-size: 13px;
+                color: $azul-2;
+                text-align: center;
+
+                @include mq("tablet-wide", max) {
+                    text-align: left;
+                }
+            }
+        }
+
+        .btn-andamento {
+            border-radius: 5px;
+            border: none;
+            background-color: $azul-2;
+            padding: 5px 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+            color: $branco;
+            text-transform: uppercase;
+
+            a {
+                font-weight: 600;
+                font-size: 15px;
+                color: $branco;
+                text-transform: uppercase;
+            }
+        }
+
+        .and_pedido{
+            height: 30px;
+
+            .col-img{
+                width: 10%;
+                display: flex;
+                justify-content: center;
+
+                img{
+                    width: auto;
+                    height: 100%;
+                }
+            }
+            .col-barra{
+                width: 15%;
+                border-radius: 3px;
+                height: 5px;
+                margin-top: 12.5px;
+                background-color: #02719e;
+            }
+
+           
+        }
+        .col-letras{
+            width: 20%;
+            font-weight: 500;
+            font-size: 13px;
+            color: $azul-2;
+            text-align: center;
+        }
+        
+    }
+
+    .produtos {
+
+        img {
+            max-width: 76px;
+            max-height: 79px;
+        }
+
+        .produto-escolhido {
+            font-weight: 500;
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+
+        .valor-produto {
+            font-weight: 400;
+            font-size: 10px;
+            margin-left: 15px;
+        }
+
+        .descricao {
+            font-weight: 500;
+            font-size: 15px;
+            color: $preto;
+        }
+
+        small {
+            font-weight: 200;
+            font-style: italic;
+            font-size: 15px;
+        }
+
+        .valor-final {
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+
+    .linha {
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: $azul-2;
+
+        &::after {
+            content: "";
+            position: absolute;
+        }
+    }
+
+    .descricao {
+
+        .grifado {
+            background-color: $azul-3;
+            padding: 5px;
+        }
+    }
+}
